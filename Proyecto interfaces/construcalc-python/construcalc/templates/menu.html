@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú - ConstruCalc</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="contenedor">
+    <div class="lateral">
+      <div class="logo"><span class="cc">CC</span> Constru<span class="calc">Calc</span></div>
+      <a href="/menu" class="activo">Menú</a>
+      <a href="/muro">Muro</a>
+      <a href="/viga">Viga</a>
+      <a href="/columna">Columna</a>
+      <a href="/contrapiso-2">Contrapiso</a>
+      <a href="/losa">Techo</a>
+      <a href="/piso">Piso</a>
+      <a href="/pintura">Pintura</a>
+
+      <div class="usuario">
+        <span class="iniciales">{{ usuario.iniciales }}</span>
+        <p>{{ usuario.nombre }}</p>
+        <p class="texto-suave">{{ usuario.rol }}</p>
+        <a href="/salir">Salir</a>
+      </div>
+    </div>
+
+    <div class="principal">
+      <h1>Menú principal</h1>
+      <p class="texto-suave">Elige qué quieres calcular.</p>
+      <div class="tarjetas">
+        <a class="tarjeta" href="/muro"><span class="numero">01</span><p>Calcular muro de ladrillo</p></a>
+        <a class="tarjeta" href="/viga"><span class="numero">02</span><p>Calcular viga de hormigón</p></a>
+        <a class="tarjeta" href="/columna"><span class="numero">03</span><p>Calcular columnas de hormigón</p></a>
+        <a class="tarjeta" href="/contrapiso-2"><span class="numero">04</span><p>Calcular contrapisos</p></a>
+        <a class="tarjeta" href="/losa"><span class="numero">05</span><p>Calcular techo</p></a>
+        <a class="tarjeta" href="/piso"><span class="numero">06</span><p>Calcular pisos</p></a>
+        <a class="tarjeta" href="/pintura"><span class="numero">07</span><p>Calcular pintura</p></a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

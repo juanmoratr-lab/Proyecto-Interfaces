@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear cuenta - ConstruCalc</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="caja">
+    <div class="logo"><span class="cc">CC</span> Constru<span class="calc">Calc</span></div>
+    <h1>Crear cuenta</h1>
+    <p class="texto-suave">Regístrate para guardar tus cálculos y acceder según tu rol.</p>
+
+    <form method="post" action="/registro">
+      <label for="usuario">Nombre de usuario</label>
+      <input type="text" name="usuario" id="usuario" placeholder="juan.perez" required>
+
+      <label for="rol">Rol</label>
+      <select name="rol" id="rol">
+        <option>Operario de obra</option>
+        <option>Maestro de obra</option>
+        <option>Ingeniero civil</option>
+      </select>
+
+      <label for="clave">Contraseña</label>
+      <input type="password" name="clave" id="clave" required>
+
+      <label for="confirmar">Confirmar contraseña</label>
+      <input type="password" name="confirmar" id="confirmar" required>
+
+    {% if error %}<p class="error">{{ error }}</p>{% endif %}
+    {% if mensaje %}<p class="ok">{{ mensaje }}</p>{% endif %}
+
+      <button class="boton" type="submit">Crear cuenta →</button>
+    </form>
+
+    <p class="centro texto-suave">¿Ya tienes cuenta? <a href="/login">Inicia sesión</a></p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calcular columnas de hormigón - ConstruCalc</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="contenedor">
+    <div class="lateral">
+      <div class="logo"><span class="cc">CC</span> Constru<span class="calc">Calc</span></div>
+      <a href="/menu">Menú</a>
+      <a href="/muro">Muro</a>
+      <a href="/viga">Viga</a>
+      <a href="/columna" class="activo">Columna</a>
+      <a href="/contrapiso-2">Contrapiso</a>
+      <a href="/losa">Techo</a>
+      <a href="/piso">Piso</a>
+      <a href="/pintura">Pintura</a>
+
+      <div class="usuario">
+        <span class="iniciales">{{ usuario.iniciales }}</span>
+        <p>{{ usuario.nombre }}</p>
+        <p class="texto-suave">{{ usuario.rol }}</p>
+        <a href="/salir">Salir</a>
+      </div>
+    </div>
+
+    <div class="principal">
+      <a class="volver" href="/menu">← Volver al menú</a>
+      <h1>Calcular columnas de hormigón</h1>
+      <p class="texto-suave">Completa los datos para calcular los materiales necesarios.</p>
+
+      <form class="formulario" method="post">
+        <label for="largo">Largo de la columna (m)</label>
+        <input type="number" step="any" min="0.01" name="largo" id="largo" required>
+
+        <button class="boton" type="submit">Calcular →</button>
+        <p class="dato">Por metro lineal → 7.5 kg cemento · 0.016 m³ arena · 0.016 m³ piedra · 6 m hierro Ø10 · 3 m hierro Ø4</p>
+      </form>
+
+      {% if resultado %}
+      <div class="resultado">
+        <h3>Materiales necesarios</h3>
+        <p>Cemento <strong>{{ resultado.cemento }} kg</strong></p>
+        <p>Arena <strong>{{ resultado.arena }} m³</strong></p>
+        <p>Piedra <strong>{{ resultado.piedra }} m³</strong></p>
+        <p>Hierro del 10 <strong>{{ resultado.hierro10 }} m</strong></p>
+        <p>Hierro del 4 <strong>{{ resultado.hierro4 }} m</strong></p>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</body>
+</html>

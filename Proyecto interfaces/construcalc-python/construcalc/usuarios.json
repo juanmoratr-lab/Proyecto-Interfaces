@@ -1,0 +1,14 @@
+[
+  {
+    "usuario": "juan.perez",
+    "nombre": "Juan Perez",
+    "rol": "Operario de obra",
+    "clave": "123456"
+  },
+  {
+    "usuario": "andres",
+    "nombre": "andres",
+    "rol": "Operario de obra",
+    "clave": "222222"
+  }
+]

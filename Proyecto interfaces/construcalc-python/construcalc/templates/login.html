@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar sesión - ConstruCalc</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="caja">
+    <div class="logo"><span class="cc">CC</span> Constru<span class="calc">Calc</span></div>
+    <h1>Iniciar sesión</h1>
+    <p class="texto-suave">Ingresa con tu usuario para acceder a la calculadora de materiales.</p>
+
+    <form method="post" action="/login">
+      <label for="usuario">Usuario</label>
+      <input type="text" name="usuario" id="usuario" placeholder="juan.perez" required>
+
+      <label for="clave">Contraseña</label>
+      <input type="password" name="clave" id="clave" required>
+
+    {% if error %}<p class="error">{{ error }}</p>{% endif %}
+    {% if mensaje %}<p class="ok">{{ mensaje }}</p>{% endif %}
+
+      <button class="boton" type="submit">Iniciar sesión →</button>
+    </form>
+
+    <p class="centro texto-suave">¿No tienes cuenta? <a href="/registro">Regístrate aquí</a></p>
+  </div>
+</body>
+</html>

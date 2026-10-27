@@ -1,0 +1,53 @@
+
+body {
+  font-family: Arial;
+  background-color: #faf7f0;
+  color: #1a2238;
+  margin: 0;
+}
+
+
+.logo { font-size: 20px; font-weight: bold; }
+.cc { background-color: #1a2238; color: #f2a81d; padding: 5px; }
+.calc { color: #c98a10; }
+
+
+.caja { width: 400px; margin: 40px auto; }
+.centro { text-align: center; }
+.texto-suave { color: gray; }
+
+
+label { display: block; margin-top: 15px; font-weight: bold; }
+input, select { width: 100%; padding: 10px; }
+input[type="radio"] { width: auto; }
+
+
+.boton { width: 100%; padding: 12px; margin-top: 20px; background-color: #f2a81d; border: none; font-weight: bold; }
+
+
+.error { color: red; }
+.ok { color: green; }
+
+
+
+.contenedor { display: flex; }
+
+.lateral { width: 200px; min-height: 100vh; padding: 20px; background-color: #1a2238; color: white; }
+.lateral a { display: block; padding: 8px; color: white; text-decoration: none; }
+.lateral a:hover { color: #f2a81d; }
+.lateral .activo { color: #f2a81d; }
+
+.iniciales { background-color: #f2a81d; color: #1a2238; padding: 8px; font-weight: bold; }
+
+.principal { padding: 30px; }
+
+
+.tarjetas { display: flex; flex-wrap: wrap; gap: 15px; }
+.tarjeta { width: 180px; padding: 15px; background-color: white; border: 1px solid lightgray; color: #1a2238; text-decoration: none; }
+
+
+.formulario { width: 400px; }
+.dato { color: gray; font-size: 14px; }
+
+
+.resultado { width: 400px; margin-top: 25px; padding: 20px; background-color: white; border: 1px solid lightgray; }
